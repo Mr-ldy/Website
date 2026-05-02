@@ -240,7 +240,7 @@ export const Admin: React.FC = () => {
                 />
                 <input
                   type="text"
-                  placeholder="图标 (填网站链接则自动抓取网站图标)"
+                  placeholder="图标 (Lucide名称 或 图片URL)"
                   value={linkForm.icon}
                   onChange={e => setLinkForm({ ...linkForm, icon: e.target.value })}
                   className="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-1 focus:ring-white/20"
@@ -743,7 +743,7 @@ export const Admin: React.FC = () => {
                   value={linkForm.icon}
                   onChange={e => setLinkForm({ ...linkForm, icon: e.target.value })}
                   className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white"
-                  placeholder="图标 (填网站链接则自动抓取网站图标)"
+                  placeholder="图标 (Lucide名称 或 图片URL)"
                 />
               </div>
               <div className="space-y-1">
