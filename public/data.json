@@ -69,6 +69,13 @@
       "icon": "https://a.gscloud.sbs/#/register?code=gIeiWTSW",
       "categoryId": "27bee341-66ff-4706-a2c6-9408634ab662",
       "id": "b40aa7b8-5831-42ba-bd7a-ca0cb76f2bc5"
+    },
+    {
+      "title": "bitsflow-VPS",
+      "url": "https://ccp.bitsflow.cloud/order/forms/",
+      "icon": "https://ccp.bitsflow.cloud/order/forms/",
+      "categoryId": "27bee341-66ff-4706-a2c6-9408634ab662",
+      "id": "d21908ee-6dca-4293-a665-b93073fc6a9d"
     }
   ],
   "categories": [
