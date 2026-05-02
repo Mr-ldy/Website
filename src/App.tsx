@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { AppProvider, useApp } from './context/AppContext';
 import { Dashboard } from './components/Dashboard';
 import { Admin } from './components/Admin';
@@ -40,4 +40,3 @@ export default function App() {
     </AppProvider>
   );
 }
-
