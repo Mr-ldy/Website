@@ -30,7 +30,7 @@
     },
     {
       "title": "lucide-图片对照表",
-      "url": "https://devtoolbox.online/zh-CN/lucide-icons",
+      "url": "",
       "icon": "https://devtoolbox.online/zh-CN/lucide-icons",
       "categoryId": "936ea45e-b228-4116-b42c-22dc47d52b4a",
       "id": "633c691f-6ab0-4028-8c30-62156d0bb604"
@@ -75,7 +75,7 @@
       {
         "id": "notes",
         "type": "notes",
-        "enabled": false,
+        "enabled": true,
         "order": 1,
         "size": "large"
       }
@@ -88,5 +88,5 @@
       "path": "public/data.json"
     }
   },
-  "notes": "github 的tk:  ghp_\ndcUIRGKbQTb17JfCk0ww36ulUKvqPl0CiZgh\n网站的路径：Mr-ldy/Website"
+  "notes": "这是一条便签，你可以在后台修改它。"
 }
