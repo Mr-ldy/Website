@@ -53,8 +53,16 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   const setCategories = (categories: Category[]) => setState(s => ({ ...s, categories }));
   const setSettings = (settings: AppSettings) => setState(s => ({ ...s, settings }));
 
+  const generateId = () => {
+    try {
+      return crypto.randomUUID();
+    } catch (e) {
+      return Date.now().toString(36) + Math.random().toString(36).substring(2);
+    }
+  };
+
   const addLink = (link: Omit<NavLink, 'id'>) => {
-    const newLink = { ...link, id: crypto.randomUUID() };
+    const newLink = { ...link, id: generateId() };
     setState(s => ({ ...s, links: [...s.links, newLink] }));
   };
 
@@ -70,7 +78,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   };
 
   const addCategory = (category: Omit<Category, 'id'>) => {
-    const newCat = { ...category, id: crypto.randomUUID() };
+    const newCat = { ...category, id: generateId() };
     setState(s => ({ ...s, categories: [...s.categories, newCat] }));
   };
 
