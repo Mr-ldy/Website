@@ -77,7 +77,11 @@ export const Dashboard: React.FC = () => {
                     className="flex flex-col items-center gap-3 p-4 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/15 hover:border-white/20 hover:-translate-y-1 transition-all group"
                   >
                     <div className="w-12 h-12 flex items-center justify-center bg-white/10 rounded-xl group-hover:scale-110 transition-transform overflow-hidden">
-                      <IconRenderer name={link.icon} className="w-6 h-6 text-white" />
+                      <IconRenderer 
+                        name={link.icon} 
+                        targetUrl={link.url} 
+                        className={(link.icon.startsWith('http') || link.icon === link.url) ? 'w-full h-full' : 'w-6 h-6 text-white'} 
+                      />
                     </div>
                     <span className="text-sm font-medium text-white/90 truncate w-full text-center">
                       {link.title}

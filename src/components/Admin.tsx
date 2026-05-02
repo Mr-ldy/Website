@@ -240,7 +240,7 @@ export const Admin: React.FC = () => {
                 />
                 <input
                   type="text"
-                  placeholder="图标 (Lucide名称 或 图片URL)"
+                  placeholder="图标 (填网站链接则自动抓取网站图标)"
                   value={linkForm.icon}
                   onChange={e => setLinkForm({ ...linkForm, icon: e.target.value })}
                   className="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-1 focus:ring-white/20"
@@ -303,7 +303,11 @@ export const Admin: React.FC = () => {
                         <GripVertical size={18} />
                       </div>
                       <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center shrink-0 overflow-hidden">
-                        <IconRenderer name={link.icon} className="w-5 h-5 text-white" />
+                        <IconRenderer 
+                          name={link.icon} 
+                          targetUrl={link.url} 
+                          className={(link.icon.startsWith('http') || link.icon === link.url) ? 'w-full h-full' : 'w-5 h-5 text-white'} 
+                        />
                       </div>
                       <div className="min-w-0">
                         <h4 className="text-white font-medium truncate">{link.title}</h4>
@@ -739,7 +743,7 @@ export const Admin: React.FC = () => {
                   value={linkForm.icon}
                   onChange={e => setLinkForm({ ...linkForm, icon: e.target.value })}
                   className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white"
-                  placeholder="图标名称或URL"
+                  placeholder="图标 (填网站链接则自动抓取网站图标)"
                 />
               </div>
               <div className="space-y-1">

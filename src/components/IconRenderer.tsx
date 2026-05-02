@@ -5,12 +5,24 @@ import { LucideIcon } from 'lucide-react';
 interface IconRendererProps {
   name: string;
   className?: string;
+  targetUrl?: string;
 }
 
-export const IconRenderer: React.FC<IconRendererProps> = ({ name, className }) => {
-  // If it's a URL (starts with http)
+export const IconRenderer: React.FC<IconRendererProps> = ({ name, className, targetUrl }) => {
+  // If the icon name matches the target URL, fetch the website's favicon
+  if (targetUrl && name === targetUrl) {
+    try {
+      const url = new URL(targetUrl);
+      const faviconUrl = `https://www.google.com/s2/favicons?domain=${url.hostname}&sz=128`;
+      return <img src={faviconUrl} alt="" className={`object-cover ${className}`} />;
+    } catch {
+      // Fallback if URL parsing fails
+    }
+  }
+
+  // If it's another URL (starts with http)
   if (name.startsWith('http')) {
-    return <img src={name} alt="" className={className} />;
+    return <img src={name} alt="" className={`object-cover ${className}`} />;
   }
 
   // Otherwise, it's a Lucide icon
