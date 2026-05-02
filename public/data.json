@@ -1,11 +1,11 @@
 {
   "links": [
     {
-      "title": "123",
-      "url": "123",
-      "icon": "Globe",
-      "categoryId": "1",
-      "id": "f44613bb-8f1b-4d14-92b8-134545a1bb52"
+      "id": "1",
+      "title": "GitHub",
+      "url": "https://github.com",
+      "icon": "Github",
+      "categoryId": "1"
     },
     {
       "id": "2",
@@ -15,11 +15,11 @@
       "categoryId": "1"
     },
     {
-      "id": "1",
-      "title": "GitHub",
-      "url": "https://github.com",
-      "icon": "Github",
-      "categoryId": "1"
+      "id": "3",
+      "title": "AI Studio",
+      "url": "https://aistudio.google.com",
+      "icon": "Sparkles",
+      "categoryId": "2"
     },
     {
       "id": "4",
@@ -29,19 +29,14 @@
       "categoryId": "2"
     },
     {
-      "id": "3",
-      "title": "AI Studio",
-      "url": "https://aistudio.google.com",
-      "icon": "Sparkles",
-      "categoryId": "2"
+      "title": "lucide-图片对照表",
+      "url": "https://devtoolbox.online/zh-CN/lucide-icons",
+      "icon": "https://devtoolbox.online/zh-CN/lucide-icons",
+      "categoryId": "936ea45e-b228-4116-b42c-22dc47d52b4a",
+      "id": "633c691f-6ab0-4028-8c30-62156d0bb604"
     }
   ],
   "categories": [
-    {
-      "name": "123",
-      "icon": "Star",
-      "id": "136a0324-306f-47b2-9548-09984a2115e9"
-    },
     {
       "id": "1",
       "name": "常用",
@@ -51,12 +46,22 @@
       "id": "2",
       "name": "AI工具",
       "icon": "Cpu"
+    },
+    {
+      "name": "网络",
+      "icon": "Router",
+      "id": "27bee341-66ff-4706-a2c6-9408634ab662"
+    },
+    {
+      "name": "图片资源",
+      "icon": "Image",
+      "id": "936ea45e-b228-4116-b42c-22dc47d52b4a"
     }
   ],
   "settings": {
     "wallpaper": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=2070",
-    "searchEngine": "baidu",
-    "showClock": false,
+    "searchEngine": "google",
+    "showClock": true,
     "adminPassword": "password",
     "theme": "glass",
     "widgets": [
@@ -72,7 +77,7 @@
         "type": "notes",
         "enabled": true,
         "order": 1,
-        "size": "small"
+        "size": "large"
       }
     ],
     "githubSync": {
@@ -83,5 +88,5 @@
       "path": "public/data.json"
     }
   },
-  "notes": "这是一条便签，你可以在后台修改它。123"
+  "notes": "这是一条便签，你可以在后台修改它。"
 }
