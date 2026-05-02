@@ -57,6 +57,65 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     }
   });
 
+  // Automatically fetch from GitHub or public data.json on startup
+  useEffect(() => {
+    const autoFetch = async () => {
+      let latestData = null;
+
+      // 1. Try fetching from GitHub API if we have a token (this gets the absolute latest commit without waiting for GH Pages)
+      if (state.settings?.githubSync?.enabled && state.settings.githubSync.token && state.settings.githubSync.repo) {
+        try {
+          const { token, repo, branch, path } = state.settings.githubSync;
+          const getRes = await fetch(`https://api.github.com/repos/${repo}/contents/${path}?ref=${branch}`, {
+            headers: {
+              'Authorization': `Bearer ${token}`,
+              'Accept': 'application/vnd.github.v3+json',
+              'Cache-Control': 'no-cache'
+            }
+          });
+          if (getRes.ok) {
+            const data = await getRes.json();
+            const decodedContent = decodeURIComponent(escape(atob(data.content)));
+            latestData = JSON.parse(decodedContent);
+          }
+        } catch (e) {
+          console.warn('Auto fetch from GitHub API failed:', e);
+        }
+      }
+
+      // 2. Fallback: fetch from /data.json (for public visitors without token)
+      if (!latestData) {
+        try {
+          const res = await fetch(`/data.json?t=${Date.now()}`);
+          if (res.ok) {
+            latestData = await res.json();
+          }
+        } catch (e) {
+          console.warn('Auto fetch from /data.json failed:', e);
+        }
+      }
+
+      // 3. Merge data if we got something
+      if (latestData && typeof latestData === 'object') {
+        setState(s => ({
+          ...DEFAULT_STATE,
+          ...latestData,
+          settings: {
+            ...DEFAULT_STATE.settings,
+            ...(latestData.settings || {}),
+            githubSync: {
+              ...(latestData.settings?.githubSync || {}),
+              token: s.settings?.githubSync?.token || '' // Always keep local token
+            }
+          }
+        }));
+      }
+    };
+
+    autoFetch();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // Run exactly once on startup
+
   useEffect(() => {
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(state));

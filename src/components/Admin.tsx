@@ -662,21 +662,7 @@ export const Admin: React.FC = () => {
                       </div>
                     </div>
                     
-                    <div className="flex gap-4 pt-2">
-                       <button
-                        onClick={async () => {
-                          setIsPulling(true);
-                          const toastId = toast.loading('正在拉取配置...');
-                          const res = await pullFromGithub();
-                          setIsPulling(false);
-                          if (res.success) toast.success(res.message, { id: toastId });
-                          else toast.error(res.message, { id: toastId });
-                        }}
-                        disabled={isPulling || isSyncing}
-                        className="flex-1 bg-blue-500/10 text-blue-400 border border-blue-500/20 py-3 rounded-xl disabled:opacity-50 hover:bg-blue-500/20 transition-all font-medium"
-                      >
-                        {isPulling ? '拉取中...' : '从 GitHub 拉取到本地'}
-                      </button>
+                    <div className="flex pt-2">
                       <button
                         onClick={async () => {
                           setIsSyncing(true);
