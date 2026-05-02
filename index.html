@@ -7,7 +7,19 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module" src="./src/main.tsx"></script>
+    <script>
+      window.onerror = function(msg) {
+        const root = document.getElementById('root');
+        if (root && root.innerHTML === '') {
+          root.innerHTML = '<div style="color:white;padding:20px;text-align:center;font-family:sans-serif;">' +
+            '<h3>程序启动失败 / App Failed to Start</h3>' +
+            '<p style="opacity:0.6;">' + msg + '</p>' +
+            '<p style="font-size:12px;opacity:0.4;">如果是部署在二级路径，请确保已使用 HashRouter 并开启了相对路径支持。</p>' +
+            '</div>';
+        }
+      };
+    </script>
   </body>
 </html>
 

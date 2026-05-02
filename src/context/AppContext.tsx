@@ -26,27 +26,39 @@ const AppContext = createContext<AppContextType | undefined>(undefined);
 
 export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [state, setState] = useState<AppState>(() => {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    if (!saved) return DEFAULT_STATE;
-    
-    const parsed = JSON.parse(saved);
-    // Deep merge or at least shallow merge top level properties and settings
-    return {
-      ...DEFAULT_STATE,
-      ...parsed,
-      settings: {
-        ...DEFAULT_STATE.settings,
-        ...(parsed.settings || {})
-      }
-    };
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (!saved) return DEFAULT_STATE;
+      
+      const parsed = JSON.parse(saved);
+      return {
+        ...DEFAULT_STATE,
+        ...parsed,
+        settings: {
+          ...DEFAULT_STATE.settings,
+          ...(parsed.settings || {})
+        }
+      };
+    } catch (e) {
+      console.error('LocalStorage load error:', e);
+      return DEFAULT_STATE;
+    }
   });
 
   const [isAuthenticated, setIsAuthenticated] = useState(() => {
-    return localStorage.getItem(AUTH_KEY) === 'true';
+    try {
+      return localStorage.getItem(AUTH_KEY) === 'true';
+    } catch (e) {
+      return false;
+    }
   });
 
   useEffect(() => {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    } catch (e) {
+      console.warn('LocalStorage save error:', e);
+    }
   }, [state]);
 
   const setLinks = (links: NavLink[]) => setState(s => ({ ...s, links }));
