@@ -34,6 +34,41 @@
       "icon": "https://devtoolbox.online/zh-CN/lucide-icons",
       "categoryId": "936ea45e-b228-4116-b42c-22dc47d52b4a",
       "id": "633c691f-6ab0-4028-8c30-62156d0bb604"
+    },
+    {
+      "title": "极速",
+      "url": "https://jsjc.cfd/#/plan",
+      "icon": "https://jsjc.cfd/#/plan",
+      "categoryId": "27bee341-66ff-4706-a2c6-9408634ab662",
+      "id": "9f33d627-f333-4e9f-b3ee-d6e8646ac308"
+    },
+    {
+      "title": "飞鸟",
+      "url": "https://01.fnxx.cc/#",
+      "icon": "https://01.fnxx.cc/#",
+      "categoryId": "27bee341-66ff-4706-a2c6-9408634ab662",
+      "id": "e686074e-156b-4bb6-bdb6-8ecbb9abbd1b"
+    },
+    {
+      "title": "飞鸟云",
+      "url": "https://cutt.ly/Rtccqfpt",
+      "icon": "https://cutt.ly/Rtccqfpt",
+      "categoryId": "27bee341-66ff-4706-a2c6-9408634ab662",
+      "id": "14acabd3-e7ed-44ae-bbb4-b023547d0b61"
+    },
+    {
+      "title": "顶级",
+      "url": "https://xn--mes358a9urctx.com/#/login",
+      "icon": "https://xn--mes358a9urctx.com/#/login",
+      "categoryId": "27bee341-66ff-4706-a2c6-9408634ab662",
+      "id": "d69e1928-edc5-4059-bf84-004f64932109"
+    },
+    {
+      "title": "光速",
+      "url": "https://a.gscloud.sbs/#/register?code=gIeiWTSW",
+      "icon": "https://a.gscloud.sbs/#/register?code=gIeiWTSW",
+      "categoryId": "27bee341-66ff-4706-a2c6-9408634ab662",
+      "id": "b40aa7b8-5831-42ba-bd7a-ca0cb76f2bc5"
     }
   ],
   "categories": [
@@ -48,14 +83,14 @@
       "icon": "Cpu"
     },
     {
-      "name": "网络",
-      "icon": "Router",
-      "id": "27bee341-66ff-4706-a2c6-9408634ab662"
-    },
-    {
       "name": "图片资源",
       "icon": "Image",
       "id": "936ea45e-b228-4116-b42c-22dc47d52b4a"
+    },
+    {
+      "name": "网络",
+      "icon": "Router",
+      "id": "27bee341-66ff-4706-a2c6-9408634ab662"
     }
   ],
   "settings": {
