@@ -7,8 +7,20 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="./src/main.tsx"></script>
+    <script type="module" src="/src/main.tsx"></script>
     <script>
+      window.addEventListener('error', function(e) {
+        if (e.target && (e.target.tagName === 'SCRIPT' || e.target.tagName === 'LINK')) {
+          const root = document.getElementById('root');
+          if (root && root.innerHTML === '') {
+            root.innerHTML = '<div style="color:white;padding:20px;text-align:center;font-family:sans-serif;">' +
+              '<h3>资源加载失败 / Resources Failed to Load</h3>' +
+              '<p style="opacity:0.6;">Could not load: ' + e.target.src + (e.target.href || '') + '</p>' +
+              '<p style="font-size:14px;opacity:0.8;">这通常是因为二级路径(如 Github Pages)未添加末尾斜杠。请确保您的访问地址以斜杠结尾，例如: <br/><b>' + location.origin + location.pathname + (location.pathname.endsWith('/') ? '' : '/') + '</b></p>' +
+              '</div>';
+          }
+        }
+      }, true);
       window.onerror = function(msg) {
         const root = document.getElementById('root');
         if (root && root.innerHTML === '') {
