@@ -75,7 +75,7 @@
       {
         "id": "notes",
         "type": "notes",
-        "enabled": true,
+        "enabled": false,
         "order": 1,
         "size": "large"
       }
@@ -88,5 +88,5 @@
       "path": "public/data.json"
     }
   },
-  "notes": "这是一条便签，你可以在后台修改它。"
+  "notes": "github 的tk:  \n网站的路径：Mr-ldy/Website"
 }
