@@ -28,9 +28,12 @@ export const Admin: React.FC = () => {
     addLink, updateLink, deleteLink,
     addCategory, updateCategory, deleteCategory,
     logout, resetToDefault, isAuthenticated,
-    notes, updateNotes
+    notes, updateNotes, exportData, importData, syncToGithub, pullFromGithub
   } = useApp();
   const navigate = useNavigate();
+
+  const [isSyncing, setIsSyncing] = useState(false);
+  const [isPulling, setIsPulling] = useState(false);
 
   useEffect(() => {
     if (!isAuthenticated) {
@@ -548,6 +551,150 @@ export const Admin: React.FC = () => {
                   确认修改密码
                 </button>
               </form>
+            </section>
+
+            {/* Data Sync */}
+            <section className="space-y-6 flex flex-col gap-6">
+              <div className="space-y-4">
+                <h3 className="text-xl font-bold text-white/80 border-b border-white/10 pb-2">本地数据导入/导出</h3>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <button
+                    onClick={() => {
+                      exportData();
+                      toast.success('已导出配置');
+                    }}
+                    className="flex-1 bg-white/10 border border-white/20 text-white py-3 rounded-xl hover:bg-white/20 transition-all font-medium"
+                  >
+                    导出配置 (JSON)
+                  </button>
+                  <div className="flex-1 relative">
+                    <input
+                      type="file"
+                      accept=".json"
+                      id="import-data"
+                      className="hidden"
+                      onChange={(e) => {
+                        const file = e.target.files?.[0];
+                        if (!file) return;
+                        const reader = new FileReader();
+                        reader.onload = (event) => {
+                          const success = importData(event.target?.result as string);
+                          if (success) {
+                            toast.success('配置导入成功！');
+                          } else {
+                            toast.error('导入失败，JSON 格式不正确');
+                          }
+                        };
+                        reader.readAsText(file);
+                        e.target.value = ''; // Reset
+                      }}
+                    />
+                    <label
+                      htmlFor="import-data"
+                      className="block w-full bg-white/10 border border-white/20 text-white py-3 rounded-xl hover:bg-white/20 transition-all font-medium text-center cursor-pointer"
+                    >
+                      导入配置 (JSON)
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-4 pt-4 border-t border-white/10">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-xl font-bold text-white/80 shrink-0">GitHub 仓库云同步</h3>
+                  <button
+                    onClick={() => setSettings({
+                      ...settings,
+                      githubSync: {
+                        ...(settings.githubSync || { token: '', repo: '', branch: 'main', path: 'public/data.json' }),
+                        enabled: !settings.githubSync?.enabled
+                      }
+                    })}
+                    className={`shrink-0 w-12 h-6 rounded-full transition-all relative ${settings.githubSync?.enabled ? 'bg-white' : 'bg-white/10'}`}
+                  >
+                    <div className={`absolute top-1 w-4 h-4 rounded-full transition-all ${settings.githubSync?.enabled ? 'right-1 bg-black' : 'left-1 bg-white/40'}`} />
+                  </button>
+                </div>
+                <p className="text-white/40 text-sm">
+                  配置 GitHub 令牌后，可直接在网页后台推拉本应用数据，不再需要手动提交 JSON 及重启。
+                </p>
+
+                {settings.githubSync?.enabled && (
+                  <div className="space-y-4 bg-white/5 p-6 rounded-2xl border border-white/10 mt-2">
+                    <div className="space-y-1">
+                      <label className="text-xs text-white/40 ml-1">GitHub Personal Access Token (需有 repo 权限)</label>
+                      <input
+                        type="password"
+                        value={settings.githubSync.token}
+                        onChange={e => setSettings({ ...settings, githubSync: { ...settings.githubSync!, token: e.target.value } })}
+                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-1 focus:ring-white/20"
+                        placeholder="ghp_xxxxxxxxxxxx"
+                      />
+                    </div>
+                    <div className="space-y-1">
+                      <label className="text-xs text-white/40 ml-1">仓库名称 (格式: User/Repo)</label>
+                      <input
+                        type="text"
+                        value={settings.githubSync.repo}
+                        onChange={e => setSettings({ ...settings, githubSync: { ...settings.githubSync!, repo: e.target.value } })}
+                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-1 focus:ring-white/20"
+                        placeholder="username/website-repo-name"
+                      />
+                    </div>
+                    <div className="flex gap-4">
+                      <div className="space-y-1 flex-1">
+                        <label className="text-xs text-white/40 ml-1">分支 (默认 main)</label>
+                        <input
+                          type="text"
+                          value={settings.githubSync.branch}
+                          onChange={e => setSettings({ ...settings, githubSync: { ...settings.githubSync!, branch: e.target.value } })}
+                          className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-1 focus:ring-white/20"
+                        />
+                      </div>
+                      <div className="space-y-1 flex-1">
+                        <label className="text-xs text-white/40 ml-1">保存路径 (如 public/data.json)</label>
+                        <input
+                          type="text"
+                          value={settings.githubSync.path}
+                          onChange={e => setSettings({ ...settings, githubSync: { ...settings.githubSync!, path: e.target.value } })}
+                          className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-1 focus:ring-white/20"
+                        />
+                      </div>
+                    </div>
+                    
+                    <div className="flex gap-4 pt-2">
+                       <button
+                        onClick={async () => {
+                          setIsPulling(true);
+                          const toastId = toast.loading('正在拉取配置...');
+                          const res = await pullFromGithub();
+                          setIsPulling(false);
+                          if (res.success) toast.success(res.message, { id: toastId });
+                          else toast.error(res.message, { id: toastId });
+                        }}
+                        disabled={isPulling || isSyncing}
+                        className="flex-1 bg-blue-500/10 text-blue-400 border border-blue-500/20 py-3 rounded-xl disabled:opacity-50 hover:bg-blue-500/20 transition-all font-medium"
+                      >
+                        {isPulling ? '拉取中...' : '从 GitHub 拉取到本地'}
+                      </button>
+                      <button
+                        onClick={async () => {
+                          setIsSyncing(true);
+                          const toastId = toast.loading('正在推送到 GitHub...');
+                          const res = await syncToGithub();
+                          setIsSyncing(false);
+                          if (res.success) toast.success(res.message, { id: toastId });
+                          else toast.error(res.message, { id: toastId });
+                        }}
+                        disabled={isSyncing || isPulling}
+                        className="flex-1 bg-white text-black py-3 rounded-xl disabled:opacity-50 hover:bg-white/90 transition-all font-bold"
+                      >
+                        {isSyncing ? '推送中...' : '将当前配置推送到 GitHub'}
+                      </button>
+                    </div>
+                  </div>
+                )}
+              </div>
             </section>
 
             {/* Danger Zone */}

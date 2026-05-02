@@ -22,6 +22,14 @@ export interface WidgetConfig {
   size: 'small' | 'medium' | 'large';
 }
 
+export interface GithubSyncConfig {
+  enabled: boolean;
+  token: string;
+  repo: string;
+  branch: string;
+  path: string;
+}
+
 export interface AppSettings {
   wallpaper: string;
   searchEngine: SearchEngine;
@@ -29,6 +37,7 @@ export interface AppSettings {
   adminPassword: string;
   theme: 'light' | 'dark' | 'glass';
   widgets: WidgetConfig[];
+  githubSync?: GithubSyncConfig;
 }
 
 export interface AppState {

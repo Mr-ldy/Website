@@ -17,6 +17,10 @@ interface AppContextType extends AppState {
   logout: () => void;
   resetToDefault: () => void;
   updateNotes: (notes: string) => void;
+  exportData: () => void;
+  importData: (data: string) => boolean;
+  syncToGithub: () => Promise<{success: boolean; message: string}>;
+  pullFromGithub: () => Promise<{success: boolean; message: string}>;
 }
 
 const STORAGE_KEY = 'sun_panel_state';
@@ -131,6 +135,148 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     setState(s => ({ ...s, notes }));
   };
 
+  const exportData = () => {
+    try {
+      const dataStr = JSON.stringify(state, null, 2);
+      const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
+      const exportFileDefaultName = 'sun-panel-config.json';
+      const linkElement = document.createElement('a');
+      linkElement.setAttribute('href', dataUri);
+      linkElement.setAttribute('download', exportFileDefaultName);
+      linkElement.click();
+    } catch(e) {
+      console.error('Export error:', e);
+    }
+  };
+
+  const importData = (data: string) => {
+    try {
+      const parsed = JSON.parse(data);
+      if (!parsed || typeof parsed !== 'object') return false;
+      setState({
+        ...DEFAULT_STATE,
+        ...parsed,
+        settings: {
+          ...DEFAULT_STATE.settings,
+          ...(parsed.settings || {})
+        }
+      });
+      return true;
+    } catch(e) {
+      console.error('Import error:', e);
+      return false;
+    }
+  };
+
+  const syncToGithub = async () => {
+    const config = state.settings.githubSync;
+    if (!config || !config.enabled || !config.token || !config.repo) {
+      return { success: false, message: 'GitHub Sync 配置不完整！' };
+    }
+
+    try {
+      const { token, repo, branch, path } = config;
+      const getUrl = `https://api.github.com/repos/${repo}/contents/${path}?ref=${branch}`;
+      let sha = '';
+      
+      const getRes = await fetch(getUrl, {
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Accept': 'application/vnd.github.v3+json'
+        }
+      });
+
+      if (getRes.ok) {
+        const getData = await getRes.json();
+        sha = getData.sha;
+      } else if (getRes.status !== 404) {
+        return { success: false, message: `获取文件失败: ${getRes.statusText}` };
+      }
+
+      // Hide token from exported config for security
+      const exportState = { ...state };
+      exportState.settings = { ...exportState.settings };
+      if (exportState.settings.githubSync) {
+        exportState.settings.githubSync = { ...exportState.settings.githubSync, token: '' };
+      }
+
+      const content = btoa(unescape(encodeURIComponent(JSON.stringify(exportState, null, 2))));
+
+      const putRes = await fetch(`https://api.github.com/repos/${repo}/contents/${path}`, {
+        method: 'PUT',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Accept': 'application/vnd.github.v3+json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          message: 'chore: Sun-Panel data auto-sync',
+          content: content,
+          branch: branch,
+          ...(sha ? { sha } : {})
+        })
+      });
+
+      if (putRes.ok) {
+        return { success: true, message: '同步到 GitHub 成功！' };
+      } else {
+        const errorData = await putRes.json();
+        return { success: false, message: `同步失败: ${errorData.message || putRes.statusText}` };
+      }
+    } catch (e: any) {
+      return { success: false, message: `同步异常: ${e.message}` };
+    }
+  };
+
+  const pullFromGithub = async () => {
+    const config = state.settings.githubSync;
+    if (!config || !config.enabled || !config.token || !config.repo) {
+      return { success: false, message: 'GitHub Sync 配置不完整！' };
+    }
+    
+    try {
+      const { token, repo, branch, path } = config;
+      const getUrl = `https://api.github.com/repos/${repo}/contents/${path}?ref=${branch}`;
+      
+      const getRes = await fetch(getUrl, {
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Accept': 'application/vnd.github.v3+json',
+          // Prevent caching
+          'Cache-Control': 'no-cache'
+        }
+      });
+      
+      if (!getRes.ok) {
+         return { success: false, message: `获取远端配置失败: ${getRes.statusText}` };
+      }
+      
+      const data = await getRes.json();
+      const decodedContent = decodeURIComponent(escape(atob(data.content)));
+      
+      const parsed = JSON.parse(decodedContent);
+      if (!parsed || typeof parsed !== 'object') return { success: false, message: '远端数据格式不正确' };
+
+      // Keep token when pulling
+      setState(s => ({
+        ...DEFAULT_STATE,
+        ...parsed,
+        settings: {
+          ...DEFAULT_STATE.settings,
+          ...(parsed.settings || {}),
+          githubSync: {
+            ...(parsed.settings?.githubSync || {}),
+            token: token // Restore the local token
+          }
+        }
+      }));
+      return { success: true, message: '从 GitHub 拉取数据成功！' };
+      
+    } catch (e: any) {
+      return { success: false, message: `获取配置异常: ${e.message}` };
+    }
+  };
+
   return (
     <AppContext.Provider value={{
       ...state,
@@ -147,7 +293,11 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       login,
       logout,
       resetToDefault,
-      updateNotes
+      updateNotes,
+      exportData,
+      importData,
+      syncToGithub,
+      pullFromGithub
     }}>
       {children}
     </AppContext.Provider>

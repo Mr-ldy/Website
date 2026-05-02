@@ -20,7 +20,14 @@ export const DEFAULT_STATE: AppState = {
     widgets: [
       { id: 'calendar', type: 'calendar', enabled: true, order: 0, size: 'small' },
       { id: 'notes', type: 'notes', enabled: true, order: 1, size: 'large' },
-    ]
+    ],
+    githubSync: {
+      enabled: false,
+      token: '',
+      repo: '',
+      branch: 'main',
+      path: 'public/data.json'
+    }
   },
   notes: '这是一条便签，你可以在后台修改它。'
 };
