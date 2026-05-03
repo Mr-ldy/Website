@@ -1,20 +1,6 @@
 {
   "links": [
     {
-      "id": "3",
-      "title": "AI Studio",
-      "url": "https://aistudio.google.com",
-      "icon": "Sparkles",
-      "categoryId": "2"
-    },
-    {
-      "id": "4",
-      "title": "ChatGPT",
-      "url": "https://chat.openai.com",
-      "icon": "MessageSquare",
-      "categoryId": "2"
-    },
-    {
       "title": "lucide-图片对照表",
       "url": "https://devtoolbox.online/zh-CN/lucide-icons",
       "icon": "https://devtoolbox.online/zh-CN/lucide-icons",
@@ -78,13 +64,6 @@
       "id": "9e3d90de-59e1-4bc9-8cfc-3e162107b14c"
     },
     {
-      "title": "aishenqi",
-      "url": "https://aishenqi.net/",
-      "icon": "https://aishenqi.net/",
-      "categoryId": "2",
-      "id": "74719f99-f776-4606-b56c-aeb1f8ceb5d4"
-    },
-    {
       "title": "科技导航站",
       "url": "https://dh.kejilion.pro/",
       "icon": "https://dh.kejilion.pro/",
@@ -146,6 +125,48 @@
       "icon": "https://a.gscloud.sbs/#/register?code=gIeiWTSW",
       "categoryId": "27bee341-66ff-4706-a2c6-9408634ab662",
       "id": "b40aa7b8-5831-42ba-bd7a-ca0cb76f2bc5"
+    },
+    {
+      "title": "AI公益网站1",
+      "url": "https://gege.chat",
+      "icon": "https://gege.chat",
+      "categoryId": "2",
+      "id": "de71c547-2521-416e-96ac-c57f8a897c1e"
+    },
+    {
+      "title": "AI公益网站2",
+      "url": "https://ya.zzmax.cn",
+      "icon": "https://ya.zzmax.cn",
+      "categoryId": "2",
+      "id": "4a96a2d2-57ca-4bd6-ae6a-b4e74ab11a08"
+    },
+    {
+      "id": "3",
+      "title": "AI Studio",
+      "url": "https://aistudio.google.com",
+      "icon": "Sparkles",
+      "categoryId": "2"
+    },
+    {
+      "id": "4",
+      "title": "ChatGPT",
+      "url": "https://chat.openai.com",
+      "icon": "MessageSquare",
+      "categoryId": "2"
+    },
+    {
+      "title": "aishenqi",
+      "url": "https://aishenqi.net/",
+      "icon": "https://aishenqi.net/",
+      "categoryId": "2",
+      "id": "74719f99-f776-4606-b56c-aeb1f8ceb5d4"
+    },
+    {
+      "title": "AI公益3",
+      "url": "https://free-llm.cups.moe/",
+      "icon": "https://free-llm.cups.moe/",
+      "categoryId": "2",
+      "id": "3351f2b3-0eb6-46fe-8169-1410041ee4e7"
     }
   ],
   "categories": [
