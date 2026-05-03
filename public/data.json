@@ -22,55 +22,6 @@
       "id": "633c691f-6ab0-4028-8c30-62156d0bb604"
     },
     {
-      "title": "科技导航站",
-      "url": "https://dh.kejilion.pro/",
-      "icon": "https://dh.kejilion.pro/",
-      "categoryId": "27bee341-66ff-4706-a2c6-9408634ab662",
-      "id": "dceb914b-ab80-47dd-8d03-81df37a0d7f9"
-    },
-    {
-      "title": "bitsflow-VPS",
-      "url": "https://ccp.bitsflow.cloud/order/forms/",
-      "icon": "https://ccp.bitsflow.cloud/order/forms/",
-      "categoryId": "27bee341-66ff-4706-a2c6-9408634ab662",
-      "id": "d21908ee-6dca-4293-a665-b93073fc6a9d"
-    },
-    {
-      "title": "极速",
-      "url": "https://jsjc.cfd/#/plan",
-      "icon": "https://jsjc.cfd/#/plan",
-      "categoryId": "27bee341-66ff-4706-a2c6-9408634ab662",
-      "id": "9f33d627-f333-4e9f-b3ee-d6e8646ac308"
-    },
-    {
-      "title": "飞鸟",
-      "url": "https://01.fnxx.cc/#",
-      "icon": "https://01.fnxx.cc/#",
-      "categoryId": "27bee341-66ff-4706-a2c6-9408634ab662",
-      "id": "e686074e-156b-4bb6-bdb6-8ecbb9abbd1b"
-    },
-    {
-      "title": "飞鸟云",
-      "url": "https://cutt.ly/Rtccqfpt",
-      "icon": "https://cutt.ly/Rtccqfpt",
-      "categoryId": "27bee341-66ff-4706-a2c6-9408634ab662",
-      "id": "14acabd3-e7ed-44ae-bbb4-b023547d0b61"
-    },
-    {
-      "title": "顶级",
-      "url": "https://xn--mes358a9urctx.com/#/login",
-      "icon": "https://xn--mes358a9urctx.com/#/login",
-      "categoryId": "27bee341-66ff-4706-a2c6-9408634ab662",
-      "id": "d69e1928-edc5-4059-bf84-004f64932109"
-    },
-    {
-      "title": "光速",
-      "url": "https://a.gscloud.sbs/#/register?code=gIeiWTSW",
-      "icon": "https://a.gscloud.sbs/#/register?code=gIeiWTSW",
-      "categoryId": "27bee341-66ff-4706-a2c6-9408634ab662",
-      "id": "b40aa7b8-5831-42ba-bd7a-ca0cb76f2bc5"
-    },
-    {
       "title": "tripo3d",
       "url": "https://www.tripo3d.ai/zh",
       "icon": "https://www.tripo3d.ai/zh",
@@ -132,6 +83,69 @@
       "icon": "https://aishenqi.net/",
       "categoryId": "2",
       "id": "74719f99-f776-4606-b56c-aeb1f8ceb5d4"
+    },
+    {
+      "title": "科技导航站",
+      "url": "https://dh.kejilion.pro/",
+      "icon": "https://dh.kejilion.pro/",
+      "categoryId": "27bee341-66ff-4706-a2c6-9408634ab662",
+      "id": "dceb914b-ab80-47dd-8d03-81df37a0d7f9"
+    },
+    {
+      "title": "bitsflow-VPS",
+      "url": "https://ccp.bitsflow.cloud/order/forms/",
+      "icon": "https://ccp.bitsflow.cloud/order/forms/",
+      "categoryId": "27bee341-66ff-4706-a2c6-9408634ab662",
+      "id": "d21908ee-6dca-4293-a665-b93073fc6a9d"
+    },
+    {
+      "title": "【IP纯净度检测】",
+      "url": "https://scamalytics.com/",
+      "icon": "https://scamalytics.com/",
+      "categoryId": "27bee341-66ff-4706-a2c6-9408634ab662",
+      "id": "bb6f8116-58e3-4aed-8131-aa3c2d6e2e91"
+    },
+    {
+      "title": "IP地址查看",
+      "url": "https://whatismyipaddress.com/",
+      "icon": "Globehttps://whatismyipaddress.com/",
+      "categoryId": "27bee341-66ff-4706-a2c6-9408634ab662",
+      "id": "6471f159-e59b-4986-9a3b-94575fb2639a"
+    },
+    {
+      "title": "极速",
+      "url": "https://jsjc.cfd/#/plan",
+      "icon": "https://jsjc.cfd/#/plan",
+      "categoryId": "27bee341-66ff-4706-a2c6-9408634ab662",
+      "id": "9f33d627-f333-4e9f-b3ee-d6e8646ac308"
+    },
+    {
+      "title": "飞鸟",
+      "url": "https://01.fnxx.cc/#",
+      "icon": "https://01.fnxx.cc/#",
+      "categoryId": "27bee341-66ff-4706-a2c6-9408634ab662",
+      "id": "e686074e-156b-4bb6-bdb6-8ecbb9abbd1b"
+    },
+    {
+      "title": "飞鸟云",
+      "url": "https://cutt.ly/Rtccqfpt",
+      "icon": "https://cutt.ly/Rtccqfpt",
+      "categoryId": "27bee341-66ff-4706-a2c6-9408634ab662",
+      "id": "14acabd3-e7ed-44ae-bbb4-b023547d0b61"
+    },
+    {
+      "title": "顶级",
+      "url": "https://xn--mes358a9urctx.com/#/login",
+      "icon": "https://xn--mes358a9urctx.com/#/login",
+      "categoryId": "27bee341-66ff-4706-a2c6-9408634ab662",
+      "id": "d69e1928-edc5-4059-bf84-004f64932109"
+    },
+    {
+      "title": "光速",
+      "url": "https://a.gscloud.sbs/#/register?code=gIeiWTSW",
+      "icon": "https://a.gscloud.sbs/#/register?code=gIeiWTSW",
+      "categoryId": "27bee341-66ff-4706-a2c6-9408634ab662",
+      "id": "b40aa7b8-5831-42ba-bd7a-ca0cb76f2bc5"
     }
   ],
   "categories": [
