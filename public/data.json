@@ -71,6 +71,13 @@
       "id": "b40aa7b8-5831-42ba-bd7a-ca0cb76f2bc5"
     },
     {
+      "title": "tripo3d",
+      "url": "https://www.tripo3d.ai/zh",
+      "icon": "https://www.tripo3d.ai/zh",
+      "categoryId": "936ea45e-b228-4116-b42c-22dc47d52b4a",
+      "id": "50d62b1e-d642-4031-a425-1ca2113e4f4f"
+    },
+    {
       "title": "学吧导航",
       "url": "https://www.xue8nav.com/",
       "icon": "https://www.xue8nav.com/",
@@ -90,6 +97,13 @@
       "icon": "https://ai-bot.cn/about-us/",
       "categoryId": "1",
       "id": "19546311-19b1-4e5c-86a7-cee7b29c9534"
+    },
+    {
+      "title": "稀土掘金",
+      "url": "https://juejin.cn/",
+      "icon": "https://juejin.cn/",
+      "categoryId": "1",
+      "id": "db9e25fd-8695-4c38-8c4b-135e4c5f7f23"
     },
     {
       "id": "1",
