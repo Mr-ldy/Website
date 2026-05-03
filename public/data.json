@@ -125,6 +125,13 @@
       "icon": "https://site.sciping.com",
       "categoryId": "1",
       "id": "9e3d90de-59e1-4bc9-8cfc-3e162107b14c"
+    },
+    {
+      "title": "aishenqi",
+      "url": "https://aishenqi.net/",
+      "icon": "https://aishenqi.net/",
+      "categoryId": "2",
+      "id": "74719f99-f776-4606-b56c-aeb1f8ceb5d4"
     }
   ],
   "categories": [
