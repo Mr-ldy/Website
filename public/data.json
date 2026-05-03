@@ -99,18 +99,18 @@
       "id": "d21908ee-6dca-4293-a665-b93073fc6a9d"
     },
     {
-      "title": "【IP纯净度检测】",
-      "url": "https://scamalytics.com/",
-      "icon": "https://scamalytics.com/",
-      "categoryId": "27bee341-66ff-4706-a2c6-9408634ab662",
-      "id": "bb6f8116-58e3-4aed-8131-aa3c2d6e2e91"
-    },
-    {
       "title": "IP地址查看",
       "url": "https://whatismyipaddress.com/",
       "icon": "Globehttps://whatismyipaddress.com/",
       "categoryId": "27bee341-66ff-4706-a2c6-9408634ab662",
       "id": "6471f159-e59b-4986-9a3b-94575fb2639a"
+    },
+    {
+      "title": "【IP纯净度检测】",
+      "url": "https://scamalytics.com/",
+      "icon": "https://scamalytics.com/",
+      "categoryId": "27bee341-66ff-4706-a2c6-9408634ab662",
+      "id": "bb6f8116-58e3-4aed-8131-aa3c2d6e2e91"
     },
     {
       "title": "极速",
