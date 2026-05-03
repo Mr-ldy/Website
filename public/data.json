@@ -1,20 +1,6 @@
 {
   "links": [
     {
-      "id": "1",
-      "title": "GitHub",
-      "url": "https://github.com",
-      "icon": "Github",
-      "categoryId": "1"
-    },
-    {
-      "id": "2",
-      "title": "Google",
-      "url": "https://google.com",
-      "icon": "Search",
-      "categoryId": "1"
-    },
-    {
       "id": "3",
       "title": "AI Studio",
       "url": "https://aistudio.google.com",
@@ -83,6 +69,48 @@
       "icon": "https://a.gscloud.sbs/#/register?code=gIeiWTSW",
       "categoryId": "27bee341-66ff-4706-a2c6-9408634ab662",
       "id": "b40aa7b8-5831-42ba-bd7a-ca0cb76f2bc5"
+    },
+    {
+      "title": "学吧导航",
+      "url": "https://www.xue8nav.com/",
+      "icon": "https://www.xue8nav.com/",
+      "categoryId": "1",
+      "id": "aeede2cb-82a4-4d8c-a9b4-e570bb163bd1"
+    },
+    {
+      "title": "吾爱导航",
+      "url": "https://www.widiz.com/",
+      "icon": "https://www.widiz.com/",
+      "categoryId": "1",
+      "id": "62d79737-252a-43c6-aafe-afd331bda233"
+    },
+    {
+      "title": "AI工具集",
+      "url": "https://ai-bot.cn/about-us/",
+      "icon": "https://ai-bot.cn/about-us/",
+      "categoryId": "1",
+      "id": "19546311-19b1-4e5c-86a7-cee7b29c9534"
+    },
+    {
+      "id": "1",
+      "title": "GitHub",
+      "url": "https://github.com",
+      "icon": "Github",
+      "categoryId": "1"
+    },
+    {
+      "id": "2",
+      "title": "Google",
+      "url": "https://google.com",
+      "icon": "Search",
+      "categoryId": "1"
+    },
+    {
+      "title": "科塔学术",
+      "url": "https://site.sciping.com",
+      "icon": "https://site.sciping.com",
+      "categoryId": "1",
+      "id": "9e3d90de-59e1-4bc9-8cfc-3e162107b14c"
     }
   ],
   "categories": [
