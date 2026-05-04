@@ -167,6 +167,13 @@
       "icon": "https://free-llm.cups.moe/",
       "categoryId": "2",
       "id": "3351f2b3-0eb6-46fe-8169-1410041ee4e7"
+    },
+    {
+      "title": "像素网站",
+      "url": "rika-ai.com",
+      "icon": "rika-ai.com",
+      "categoryId": "936ea45e-b228-4116-b42c-22dc47d52b4a",
+      "id": "d763f9d5-4292-4e70-8e3e-0264563b3e70"
     }
   ],
   "categories": [
