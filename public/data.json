@@ -174,6 +174,13 @@
       "icon": "rika-ai.com",
       "categoryId": "936ea45e-b228-4116-b42c-22dc47d52b4a",
       "id": "d763f9d5-4292-4e70-8e3e-0264563b3e70"
+    },
+    {
+      "title": "像素网站",
+      "url": "https://rika-ai.com/",
+      "icon": "https://rika-ai.com/",
+      "categoryId": "936ea45e-b228-4116-b42c-22dc47d52b4a",
+      "id": "fe9276cc-072c-4b00-b6e3-61914140c367"
     }
   ],
   "categories": [
