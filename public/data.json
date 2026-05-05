@@ -181,6 +181,13 @@
       "icon": "https://rika-ai.com/",
       "categoryId": "936ea45e-b228-4116-b42c-22dc47d52b4a",
       "id": "fe9276cc-072c-4b00-b6e3-61914140c367"
+    },
+    {
+      "title": "视频生成网站",
+      "url": "https://veoaifree.com/veo-video-generator/",
+      "icon": "https://veoaifree.com/veo-video-generator/",
+      "categoryId": "2",
+      "id": "8228d7fa-f4fc-4145-8aee-96671e24c6c1"
     }
   ],
   "categories": [
