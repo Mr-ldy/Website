@@ -1,20 +1,6 @@
 {
   "links": [
     {
-      "title": "lucide-图片对照表",
-      "url": "https://devtoolbox.online/zh-CN/lucide-icons",
-      "icon": "https://devtoolbox.online/zh-CN/lucide-icons",
-      "categoryId": "936ea45e-b228-4116-b42c-22dc47d52b4a",
-      "id": "633c691f-6ab0-4028-8c30-62156d0bb604"
-    },
-    {
-      "title": "tripo3d",
-      "url": "https://www.tripo3d.ai/zh",
-      "icon": "https://www.tripo3d.ai/zh",
-      "categoryId": "936ea45e-b228-4116-b42c-22dc47d52b4a",
-      "id": "50d62b1e-d642-4031-a425-1ca2113e4f4f"
-    },
-    {
       "title": "学吧导航",
       "url": "https://www.xue8nav.com/",
       "icon": "https://www.xue8nav.com/",
@@ -127,20 +113,6 @@
       "id": "b40aa7b8-5831-42ba-bd7a-ca0cb76f2bc5"
     },
     {
-      "title": "像素网站",
-      "url": "rika-ai.com",
-      "icon": "rika-ai.com",
-      "categoryId": "936ea45e-b228-4116-b42c-22dc47d52b4a",
-      "id": "d763f9d5-4292-4e70-8e3e-0264563b3e70"
-    },
-    {
-      "title": "像素网站",
-      "url": "https://rika-ai.com/",
-      "icon": "https://rika-ai.com/",
-      "categoryId": "936ea45e-b228-4116-b42c-22dc47d52b4a",
-      "id": "fe9276cc-072c-4b00-b6e3-61914140c367"
-    },
-    {
       "title": "AI公益网站1",
       "url": "https://gege.chat",
       "icon": "https://gege.chat",
@@ -195,6 +167,41 @@
       "icon": "https://veoaifree.com/veo-video-generator/",
       "categoryId": "2",
       "id": "8228d7fa-f4fc-4145-8aee-96671e24c6c1"
+    },
+    {
+      "title": "lucide-图片对照表",
+      "url": "https://devtoolbox.online/zh-CN/lucide-icons",
+      "icon": "https://devtoolbox.online/zh-CN/lucide-icons",
+      "categoryId": "936ea45e-b228-4116-b42c-22dc47d52b4a",
+      "id": "633c691f-6ab0-4028-8c30-62156d0bb604"
+    },
+    {
+      "title": "tripo3d",
+      "url": "https://www.tripo3d.ai/zh",
+      "icon": "https://www.tripo3d.ai/zh",
+      "categoryId": "936ea45e-b228-4116-b42c-22dc47d52b4a",
+      "id": "50d62b1e-d642-4031-a425-1ca2113e4f4f"
+    },
+    {
+      "title": "holopix",
+      "url": "https://holopix.cn/home",
+      "icon": "https://holopix.cn/home",
+      "categoryId": "936ea45e-b228-4116-b42c-22dc47d52b4a",
+      "id": "e74f3af1-485e-4b08-9cbd-f7450346f5df"
+    },
+    {
+      "title": "像素网站",
+      "url": "rika-ai.com",
+      "icon": "rika-ai.com",
+      "categoryId": "936ea45e-b228-4116-b42c-22dc47d52b4a",
+      "id": "d763f9d5-4292-4e70-8e3e-0264563b3e70"
+    },
+    {
+      "title": "像素网站",
+      "url": "https://rika-ai.com/",
+      "icon": "https://rika-ai.com/",
+      "categoryId": "936ea45e-b228-4116-b42c-22dc47d52b4a",
+      "id": "fe9276cc-072c-4b00-b6e3-61914140c367"
     }
   ],
   "categories": [
