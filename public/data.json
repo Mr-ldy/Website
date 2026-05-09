@@ -202,6 +202,13 @@
       "icon": "https://rika-ai.com/",
       "categoryId": "936ea45e-b228-4116-b42c-22dc47d52b4a",
       "id": "fe9276cc-072c-4b00-b6e3-61914140c367"
+    },
+    {
+      "title": "天天基金",
+      "url": "https://fund.eastmoney.com/",
+      "icon": "https://fund.eastmoney.com/",
+      "categoryId": "83b652a8-2cec-4108-8980-c809e9dcdf88",
+      "id": "1304ec20-3db8-4ed6-a0c7-66503a86a9d7"
     }
   ],
   "categories": [
@@ -224,6 +231,11 @@
       "name": "网络",
       "icon": "Router",
       "id": "27bee341-66ff-4706-a2c6-9408634ab662"
+    },
+    {
+      "name": "投资",
+      "icon": "ChartLine",
+      "id": "83b652a8-2cec-4108-8980-c809e9dcdf88"
     }
   ],
   "settings": {
