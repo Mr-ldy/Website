@@ -251,6 +251,20 @@
       "icon": "https://liberatedpixelcup.github.io/",
       "categoryId": "936ea45e-b228-4116-b42c-22dc47d52b4a",
       "id": "8c5daa69-2264-4a9d-87ce-cd8e2c5a4e3b"
+    },
+    {
+      "title": "Cloudflare",
+      "url": "https://www.cloudflare.com",
+      "icon": "https://www.cloudflare.com",
+      "categoryId": "27bee341-66ff-4706-a2c6-9408634ab662",
+      "id": "604adb93-c4bd-4049-841b-c646ac66addb"
+    },
+    {
+      "title": "dnshe免费域名",
+      "url": "https://www.dnshe.com/",
+      "icon": "https://www.dnshe.com/",
+      "categoryId": "27bee341-66ff-4706-a2c6-9408634ab662",
+      "id": "32e1d1f0-331b-4e67-bc8c-06fe1b73550b"
     }
   ],
   "categories": [
