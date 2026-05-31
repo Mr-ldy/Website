@@ -272,6 +272,13 @@
       "icon": "https://frameronin.com/",
       "categoryId": "936ea45e-b228-4116-b42c-22dc47d52b4a",
       "id": "d54ae20f-3eb0-45fa-97bd-2309d541d892"
+    },
+    {
+      "title": "Wise",
+      "url": "https://wise.com/",
+      "icon": "https://wise.com/",
+      "categoryId": "7117f4f3-2cef-4381-a78c-cfaeeb166d34",
+      "id": "51ec413e-8e76-475a-9bf3-af7c71271e0b"
     }
   ],
   "categories": [
@@ -299,6 +306,11 @@
       "name": "投资",
       "icon": "ChartLine",
       "id": "83b652a8-2cec-4108-8980-c809e9dcdf88"
+    },
+    {
+      "name": "bank",
+      "icon": "CreditCard",
+      "id": "7117f4f3-2cef-4381-a78c-cfaeeb166d34"
     }
   ],
   "settings": {
