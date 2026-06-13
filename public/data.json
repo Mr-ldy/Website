@@ -279,6 +279,13 @@
       "icon": "https://wise.com/",
       "categoryId": "7117f4f3-2cef-4381-a78c-cfaeeb166d34",
       "id": "51ec413e-8e76-475a-9bf3-af7c71271e0b"
+    },
+    {
+      "title": "nodeloc",
+      "url": "https://www.nodeloc.com",
+      "icon": "https://www.nodeloc.com",
+      "categoryId": "1",
+      "id": "d3f416ee-e5fe-42f9-b886-39ae6c8fc0ae"
     }
   ],
   "categories": [
