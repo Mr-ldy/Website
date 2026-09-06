@@ -286,6 +286,13 @@
       "icon": "https://www.nodeloc.com",
       "categoryId": "1",
       "id": "d3f416ee-e5fe-42f9-b886-39ae6c8fc0ae"
+    },
+    {
+      "title": "雪球网",
+      "url": "https://xueqiu.com/hq",
+      "icon": "https://xueqiu.com/hq",
+      "categoryId": "83b652a8-2cec-4108-8980-c809e9dcdf88",
+      "id": "533ca433-a52b-435d-a139-b94fe6a3c118"
     }
   ],
   "categories": [
