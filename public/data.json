@@ -293,6 +293,13 @@
       "icon": "https://xueqiu.com/hq",
       "categoryId": "83b652a8-2cec-4108-8980-c809e9dcdf88",
       "id": "533ca433-a52b-435d-a139-b94fe6a3c118"
+    },
+    {
+      "title": " AlphaFox",
+      "url": "https://www.alphafox.app/zh/radar?ref=BENNETT",
+      "icon": "https://www.alphafox.app/zh/radar?ref=BENNETT",
+      "categoryId": "83b652a8-2cec-4108-8980-c809e9dcdf88",
+      "id": "296aaa77-cc35-436c-836b-7cb8b000750b"
     }
   ],
   "categories": [
@@ -357,5 +364,5 @@
       "path": "public/data.json"
     }
   },
-  "notes": "tk: ghp_\ndcUIRGKbQTb17JfCk0ww36ulUKvqPl0CiZgh\n地址：Mr-ldy/Website\n\n纳指100会代表每股整体表现，需要研究"
+  "notes": "tk: ghp_\ndcUIRGKbQTb17JfCk0ww36ulUKvqPl0CiZgh\n地址：Mr-ldy/Website"
 }
