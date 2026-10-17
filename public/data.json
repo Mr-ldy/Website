@@ -300,6 +300,13 @@
       "icon": "https://www.alphafox.app/zh/radar?ref=BENNETT",
       "categoryId": "83b652a8-2cec-4108-8980-c809e9dcdf88",
       "id": "296aaa77-cc35-436c-836b-7cb8b000750b"
+    },
+    {
+      "title": "bibigpt",
+      "url": "https://bibigpt.co",
+      "icon": "https://bibigpt.co",
+      "categoryId": "27bee341-66ff-4706-a2c6-9408634ab662",
+      "id": "e63ce6ef-d831-4a0c-85bc-1d1ea088169b"
     }
   ],
   "categories": [
