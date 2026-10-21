@@ -307,6 +307,20 @@
       "icon": "https://bibigpt.co",
       "categoryId": "27bee341-66ff-4706-a2c6-9408634ab662",
       "id": "e63ce6ef-d831-4a0c-85bc-1d1ea088169b"
+    },
+    {
+      "title": "coinglass",
+      "url": "https://www.coinglass.com/zh",
+      "icon": "https://www.coinglass.com/zh",
+      "categoryId": "83b652a8-2cec-4108-8980-c809e9dcdf88",
+      "id": "4a829113-82d7-4050-b3f1-8190629ea9c9"
+    },
+    {
+      "title": "金十数据",
+      "url": "https://www.jin10.com/",
+      "icon": "https://www.jin10.com/",
+      "categoryId": "83b652a8-2cec-4108-8980-c809e9dcdf88",
+      "id": "af3e0573-99ad-4f0a-baaa-814958a47b17"
     }
   ],
   "categories": [
