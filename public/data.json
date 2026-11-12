@@ -353,6 +353,11 @@
       "name": "bank",
       "icon": "CreditCard",
       "id": "7117f4f3-2cef-4381-a78c-cfaeeb166d34"
+    },
+    {
+      "name": "Github",
+      "icon": "Github",
+      "id": "17aa2be1-d638-4d25-acd2-7ff7e79493ae"
     }
   ],
   "settings": {
