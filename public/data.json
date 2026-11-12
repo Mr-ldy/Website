@@ -321,6 +321,13 @@
       "icon": "https://www.jin10.com/",
       "categoryId": "83b652a8-2cec-4108-8980-c809e9dcdf88",
       "id": "af3e0573-99ad-4f0a-baaa-814958a47b17"
+    },
+    {
+      "title": "REA",
+      "url": "https://github.com/morluto/rea",
+      "icon": "https://github.com/morluto/rea",
+      "categoryId": "17aa2be1-d638-4d25-acd2-7ff7e79493ae",
+      "id": "7b3de5a4-229d-47a4-9381-192cf91c53b6"
     }
   ],
   "categories": [
