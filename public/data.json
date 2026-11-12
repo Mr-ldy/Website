@@ -328,6 +328,13 @@
       "icon": "https://github.com/morluto/rea",
       "categoryId": "17aa2be1-d638-4d25-acd2-7ff7e79493ae",
       "id": "7b3de5a4-229d-47a4-9381-192cf91c53b6"
+    },
+    {
+      "title": "游戏公司",
+      "url": "https://github.com/Donchitos/Claude-Code-Game-Studios",
+      "icon": "https://github.com/Donchitos/Claude-Code-Game-Studios",
+      "categoryId": "17aa2be1-d638-4d25-acd2-7ff7e79493ae",
+      "id": "0cc0b276-bf54-43db-b50f-7ec4fea6daca"
     }
   ],
   "categories": [
