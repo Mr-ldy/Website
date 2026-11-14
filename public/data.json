@@ -335,6 +335,13 @@
       "icon": "https://github.com/Donchitos/Claude-Code-Game-Studios",
       "categoryId": "17aa2be1-d638-4d25-acd2-7ff7e79493ae",
       "id": "0cc0b276-bf54-43db-b50f-7ec4fea6daca"
+    },
+    {
+      "title": "Earnings Whispers(美国公司分析)",
+      "url": "https://www.earningswhispers.com/",
+      "icon": "https://www.earningswhispers.com/",
+      "categoryId": "83b652a8-2cec-4108-8980-c809e9dcdf88",
+      "id": "4ecc6163-e63e-4aec-857d-a035169b57c6"
     }
   ],
   "categories": [
