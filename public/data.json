@@ -342,6 +342,13 @@
       "icon": "https://www.earningswhispers.com/",
       "categoryId": "83b652a8-2cec-4108-8980-c809e9dcdf88",
       "id": "4ecc6163-e63e-4aec-857d-a035169b57c6"
+    },
+    {
+      "title": "arena",
+      "url": "https://arena.ai/",
+      "icon": "https://arena.ai/",
+      "categoryId": "2",
+      "id": "812e4238-bfc6-4865-abc8-935244abcd2f"
     }
   ],
   "categories": [
