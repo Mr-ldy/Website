@@ -349,6 +349,20 @@
       "icon": "https://arena.ai/",
       "categoryId": "2",
       "id": "812e4238-bfc6-4865-abc8-935244abcd2f"
+    },
+    {
+      "title": "越狱AI",
+      "url": "https://github.com/lalipa2003-arch/JailbreakHub/tree/main",
+      "icon": "https://github.com/lalipa2003-arch/JailbreakHub/tree/main",
+      "categoryId": "2",
+      "id": "95b1c434-c45e-4b26-985b-5c8ca0e9f45e"
+    },
+    {
+      "title": "pixel-search",
+      "url": "https://huggingface.co/spaces/cfahlgren1/pixel-search",
+      "icon": "https://huggingface.co/spaces/cfahlgren1/pixel-search",
+      "categoryId": "936ea45e-b228-4116-b42c-22dc47d52b4a",
+      "id": "8bae7f00-856d-4786-8cc9-458f47098e6a"
     }
   ],
   "categories": [
